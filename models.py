@@ -34,6 +34,7 @@ class Ingredient(Base):
         back_populates="ingredients",
     )
 
+
 class Recipe(Base):
     """Рецепт блюда в кулинарной книге."""
 

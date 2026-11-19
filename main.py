@@ -29,6 +29,7 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     Base.metadata.create_all(bind=engine)
     yield
 
+
 app = FastAPI(
     title="Cookbook API",
     description=(

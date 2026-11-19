@@ -37,6 +37,7 @@ def create_recipe(db: Session, recipe_data: RecipeCreate) -> Recipe:
     db.refresh(recipe)
     return recipe
 
+
 def get_recipes(db: Session) -> list[Recipe]:
     """Возвращает все рецепты, отсортированные для первого экрана.
 
@@ -76,3 +77,4 @@ def increment_recipe_views(db: Session, recipe: Recipe) -> Recipe:
     db.commit()
     db.refresh(recipe)
     return recipe
+    

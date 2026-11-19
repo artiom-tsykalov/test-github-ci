@@ -158,6 +158,7 @@ def test_get_recipes_sorted_by_views_then_cooking_time() -> None:
     titles = [recipe["title"] for recipe in response.json()]
     assert titles == ["Паста", "Блины", "Суп", "Салат"]
 
+
 def test_get_recipe_returns_detail_and_increments_views() -> None:
     """GET /recipes/{id} возвращает детали и увеличивает счётчик просмотров."""
     created = create_recipe(title="Блины", cooking_time_minutes=30)
