@@ -18,7 +18,6 @@ def create_recipe(db: Session, recipe_data: RecipeCreate) -> Recipe:
         Созданный объект `Recipe` с заполненным списком ингредиентов.
     """
 
-
     recipe = Recipe(
         title=recipe_data.title,
         cooking_time_minutes=recipe_data.cooking_time_minutes,
