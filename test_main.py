@@ -12,7 +12,6 @@ from database import get_db
 from main import app
 from models import Base
 
-
 TEST_DATABASE_URL = "sqlite://"
 
 engine = create_engine(
