@@ -7,8 +7,8 @@
     http://127.0.0.1:8000/docs
 """
 
-from contextlib import asynccontextmanager
 from collections.abc import AsyncIterator
+from contextlib import asynccontextmanager
 
 from fastapi import Depends, FastAPI, HTTPException, status
 from sqlalchemy.orm import Session
