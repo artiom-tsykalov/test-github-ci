@@ -1,6 +1,6 @@
 """ORM-модели SQLAlchemy: описание таблиц базы данных."""
 
-from datetime import datetime, timezone
+from datetime import datetime
 
 from sqlalchemy import DateTime, ForeignKey, Integer, String, Text, func
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
