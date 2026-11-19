@@ -30,7 +30,7 @@ class IngredientRead(IngredientCreate):
 
     id: int = Field(
         ..., examples=[1], description="Уникальный идентификатор ингредиента."
-        )
+    )
     position: int = Field(
         ...,
         ge=0,
