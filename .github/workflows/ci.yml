@@ -41,7 +41,7 @@ jobs:
         run: flake8 .
 
       - name: Run mypy
-        run: mypy app
+        run: mypy crud.py database.py main.py models.py schemas.py
 
       - name: Run tests
         run: pytest -v
