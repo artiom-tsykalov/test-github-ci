@@ -17,6 +17,7 @@ def create_recipe(db: Session, recipe_data: RecipeCreate) -> Recipe:
     Returns:
         Созданный объект `Recipe` с заполненным списком ингредиентов.
     """
+
     recipe = Recipe(
         title=recipe_data.title,
         cooking_time_minutes=recipe_data.cooking_time_minutes,
@@ -36,6 +37,7 @@ def create_recipe(db: Session, recipe_data: RecipeCreate) -> Recipe:
     db.commit()
     db.refresh(recipe)
     return recipe
+
 
 def get_recipes(db: Session) -> list[Recipe]:
     """Возвращает все рецепты, отсортированные для первого экрана.

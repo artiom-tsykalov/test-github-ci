@@ -28,7 +28,9 @@ class IngredientRead(IngredientCreate):
 
     model_config = ConfigDict(from_attributes=True)
 
-    id: int = Field(..., examples=[1], description="Уникальный идентификатор ингредиента.")
+    id: int = Field(
+        ..., examples=[1], description="Уникальный идентификатор ингредиента."
+    )
     position: int = Field(
         ...,
         ge=0,
@@ -85,6 +87,7 @@ class RecipeCreate(BaseModel):
         min_length=1,
         description="Список ингредиентов рецепта.",
     )
+
 
 class RecipeDetail(RecipeListItem):
     """Полная информация о рецепте для второго экрана."""
